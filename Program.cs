@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MeuPrev.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MeuPrevContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MeuPrevContext") ?? throw new InvalidOperationException("Connection string 'MeuPrevContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
