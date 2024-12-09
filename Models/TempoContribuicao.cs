@@ -5,6 +5,7 @@
         public int Dias { get; set; }
         public int Meses { get; set; }
         public int Anos { get; set; }
+        public string? Cargo { get; set; }
 
         public int ToDias()
         {

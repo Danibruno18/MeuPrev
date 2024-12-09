@@ -12,6 +12,7 @@ namespace MeuPrev.Models
         public Sexo Sexo { get; set; }
         [Required]
         [Display(Name = "Data de Nascimento")]
+        [DataType(DataType.Date)]
         public DateTime DataNascimento { get; set; }
         [Required]
         public string? Rg { get; set; }
